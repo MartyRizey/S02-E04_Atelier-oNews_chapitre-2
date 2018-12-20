@@ -89,6 +89,12 @@
   font-size: 0.9em;
 }
 
+/* page article .html */
+.post--solo {
+  width: 100%;
+}
+/* ------------------ */
+
 .post__meta {
   font-size: 0.9em;
   color: grey;
