@@ -39,6 +39,8 @@ Video => https://drive.google.com/drive/folders/1R_6TthTISUWZDSu5xWIGIsz3TjLcNqd
     - SMACSS : https://smacss.com/fr
                https://smacss.com/files/smacss-fr.pdf
 ```
+~
+
 
 **ETAPE 2 :**
 **Factoriser les fichiers _index.html_ et _article.html_ :**_____________________________________________________________00:35:45mns
@@ -89,6 +91,8 @@ Si vous oublier de mettre ce ".keep" le dossier n'apparaîtrera pas en versionna
 <?php require 'inc/footer.php'; ?>
 
 ```
+~
+
 
 **ETAPE 3 :**
 **Données dynamiques :**___________________________________________________________________________________01:06:14mns
@@ -110,4 +114,22 @@ Rendre les données de la page "article" dynamiques. C'est à dire que ces donn�
 - Remplacer et afficher les données en dur dans le code HTML par les valeurs des clés du tableau en PHP.
     - `<?php echo ......; ?>` ou syntaxe raccourcie `<?= ....... ; ?>` mieux adaptèe pour mettre dans des balises HTML.
     - Ex : `<?= $tableau['clé'] ;?>` affichera la valeur contenu à la clé de $tableau.
-    
+
+~
+
+**ETAPE 4 :**
+**Navigation dynamique:**__________________________________________________________________________Video 2 - 00:00:00mns
+> **Video 2 :**
+> Video => https://drive.google.com/drive/folders/1Tx1wTQiwiuLvfvigjMINMzvIf9AEfor4
+> /media/sf_win_Linux_Partage/A_utiliser_dans_LInux/Lunar/Video_Cours/Saison-2-PHP_bases/S02E05-Formulaires/ Red-2-Correction suite.mp4
+
+Rendre le menu de navigation de la partie gauche dynamique.
+- **Architecture et découpage**.
+
+    - Créer dans le dossier _php/inc/_ un fichier **nav.php**.
+    - Dans le fichier `header.php` copier la partie qui nous intéresse, et coller la dans le fichier **nav.php**. 
+    - Pensez à inclure avec un _include_ ou un _require_ le fichier dans le `header.php` pour y avoir accès.
+    - Vérifiez bien que votre site fonctionne toujours ...
+- **Rendre dynamique la navigation**.
+    - Comme pour l'article, créer un tableau associatif qui contiendra les données à afficher pour le menu dans le fichier **nav.php**.
+
