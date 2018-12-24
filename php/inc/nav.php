@@ -58,6 +58,14 @@ $nav = array(
 	]
 );
 
+// j'ajoute une entrée ou un index supplémentaire dans le tableau
+$nav[] = array(
+
+	'link'   => 'oclock.io',
+	'text'   => 'Visitez O\'clock',
+	'target' => '_blank'
+);
+
 /*
 	si j'écris mon foreach avec $var1 => $var2
 	je vais obtenir une varaible qui ne me servira à rien
@@ -73,12 +81,23 @@ $nav = array(
 
 foreach($nav as $link_details) {
 
+	$target = '';
+
+	// Je demande à PHP si la clé 'target' existe dans mon tableau
+	if(isset($link_details['target'])){
+
+		// si oui, ou si il trouve la clé en parcourant le tableau
+		$target = 'target="' . $link_details['target'] . '"';
+	}
+
+	/**
+	 * Au final ma variable $target n'est pas vide uniquement dans 
+	 * le cas où j'ai définie dans mon tableau la clé "target"
+	 */	 
+
 	echo '<li class="left__nav-item">';
-
-	echo '<a href="'.$link_details['link'].'" class="left__nav-link">';
-	
+	echo '<a href="'.$link_details['link'].'" '. $target .'class="left__nav-link">';	
 	echo $link_details['text'];
-
 	echo '</a></li>';
 }
 
