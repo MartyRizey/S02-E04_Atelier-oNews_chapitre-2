@@ -131,5 +131,9 @@ Rendre le menu de navigation de la partie gauche dynamique.
     - Pensez à inclure avec un _include_ ou un _require_ le fichier dans le `header.php` pour y avoir accès.
     - Vérifiez bien que votre site fonctionne toujours ...
 - **Rendre dynamique la navigation**.
-    - Comme pour l'article, créer un tableau associatif qui contiendra les données à afficher pour le menu dans le fichier **nav.php**.
+    - Comme pour l'article, nous aurons besoin de stocker les données dans un tableau dans le fichier **nav.php**.
+    - Pour voir un autre type de tableau, créer un tableau multidimentionnel, dont chaque index sera un tableau associatif,
+      avec une 'clé' et une valeur.
+    - Parcourir le tableau avec une boucle `foreach` pour afficher les liens de la barre de navigation.
+    - Créer un index supplémentaire dans le tableau pour ajouter un lien externe au site, vers un autre site dans une autre page.
 

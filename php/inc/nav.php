@@ -45,23 +45,24 @@ $nav[] = [
 // Version complexe plus souple en une seule déclaration
 $nav = array(
 	[
-		'link' => 'plan',
+		'link' => 'plan', // redirige vers la page plan.php du site
 	 	'text' => 'Plan du site'
 	],
 	[
-		'link' => 'mentions-legales',
+		'link' => 'mentions-legales', // redirige vers la page mentions-legales.php du site
 	 	'text' => 'Mentions légales'
 	],
 	[
-		'link' => 'contact',
+		'link' => 'contact', // redirige vers la page contact.php du site
 	 	'text' => 'Contact'
 	]
 );
 
 // j'ajoute une entrée ou un index supplémentaire dans le tableau
 $nav[] = array(
-
-	'link'   => 'oclock.io',
+	
+ 	 // selon la condition on redirige vers une page du site '.php' ou un site externe 'https://'
+	'link'   => 'oclock.io', 
 	'text'   => 'Visitez O\'clock',
 	'target' => '_blank'
 );
@@ -81,6 +82,10 @@ $nav[] = array(
 
 foreach($nav as $link_details) {
 
+	// Mise en place du lien par défaut (lien relatif)
+	// on reste dans notre site et on redirige vers une autre page. Ne pas oublier le '.php' du coup.	
+	$link = $link_details['link'].'.php';
+
 	$target = '';
 
 	// Je demande à PHP si la clé 'target' existe dans mon tableau
@@ -88,6 +93,10 @@ foreach($nav as $link_details) {
 
 		// si oui, ou si il trouve la clé en parcourant le tableau
 		$target = 'target="' . $link_details['target'] . '"';
+
+		// si on a une target, on créé un lien absolue vers la page du site
+		// c'est à dire que l'on sort de notre site
+		$link = 'https://' . $link_details['link'];
 	}
 
 	/**
@@ -96,7 +105,7 @@ foreach($nav as $link_details) {
 	 */	 
 
 	echo '<li class="left__nav-item">';
-	echo '<a href="'.$link_details['link'].'" '. $target .'class="left__nav-link">';	
+	echo '<a href="'.$link.'"'. $target .'class="left__nav-link">';	
 	echo $link_details['text'];
 	echo '</a></li>';
 }
