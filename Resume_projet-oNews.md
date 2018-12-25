@@ -136,4 +136,18 @@ Rendre le menu de navigation de la partie gauche dynamique.
       avec une 'clé' et une valeur.
     - Parcourir le tableau avec une boucle `foreach` pour afficher les liens de la barre de navigation.
     - Créer un index supplémentaire dans le tableau pour ajouter un lien externe au site, vers un autre site dans une autre page.
+    - Lien relatif et lien absolu.
+
+**ETAPE 5 :**
+**Créer une page pour chaque article :**___________________________________________________________Video 3 - 00:05:36mns
+> **Video 3 :**
+> Video => https://drive.google.com/drive/folders/1Tx1wTQiwiuLvfvigjMINMzvIf9AEfor4
+> /media/sf_win_Linux_Partage/A_utiliser_dans_LInux/Lunar/Video_Cours/Saison-2-PHP_bases/S02E05-Formulaires/ Red-3-Correction fin & decouverte formulaires.mp4
+
+- **Architecture et découpage**.
+    - Créer un fichier PHP Par article (6 au total) dans le dossier `PHP`.
+    - Faire correspondre dans le fichier `index.php` les liens _Continue reading_  avec les nouveaux fichiers qui seront nos pages article.
+    - Créez un nouveau fichier dans `php/inc/`qui contiendra la partie mise en forme des articles.
+      Dans les fichiers article on ne gardera que la partie données (tableaux) et la partie affichage en utilisant **include** ou **require** pour importer la mise en forme. 
+
 
