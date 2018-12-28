@@ -12,6 +12,11 @@
   align-items: flex-end;
 }
 
+.left--contact {
+  /* image appliquée sur l'élément qui à la class "left--contact" */
+  background-image: url(../images/face.jpg);
+}
+
 .left__title {
   text-transform: uppercase;
   font-size: 1.4em;
@@ -74,6 +79,7 @@
   padding: 0.5em 1em;
   margin: 0;
   background-color: #f9f9f9;
+  border-bottom: solid 2px #E3E1E1;
 }
 
 .posts {

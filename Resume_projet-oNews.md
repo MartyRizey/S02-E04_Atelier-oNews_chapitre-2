@@ -138,6 +138,7 @@ Rendre le menu de navigation de la partie gauche dynamique.
     - Créer un index supplémentaire dans le tableau pour ajouter un lien externe au site, vers un autre site dans une autre page.
     - Lien relatif et lien absolu.
 
+
 **ETAPE 5 :**
 **Créer une page pour chaque article :**___________________________________________________________Video 3 - 00:05:36mns
 > **Video 3 :**
@@ -146,8 +147,21 @@ Rendre le menu de navigation de la partie gauche dynamique.
 
 - **Architecture et découpage**.
     - Créer un fichier PHP Par article (6 au total) dans le dossier `PHP`.
-    - Faire correspondre dans le fichier `index.php` les liens _Continue reading_  avec les nouveaux fichiers qui seront nos pages article.
+    - Faire correspondre dans le fichier `index.php` les liens _Continue reading_  avec les nouveaux   fichiers qui seront nos pages article.
     - Créez un nouveau fichier dans `php/inc/`qui contiendra la partie mise en forme des articles.
       Dans les fichiers article on ne gardera que la partie données (tableaux) et la partie affichage en utilisant **include** ou **require** pour importer la mise en forme. 
+    - Pensez à changer les données tel que la catégory et l'avatar dans chaque tableau qui correspond à une page article.
 
 
+**BONUS :**
+**Ajouter une page de contact :**__________________________________________________________________Video 3 - 00:33:15mns
+> **Video 3 :**
+> Video => https://drive.google.com/drive/folders/1Tx1wTQiwiuLvfvigjMINMzvIf9AEfor4
+> /media/sf_win_Linux_Partage/A_utiliser_dans_LInux/Lunar/Video_Cours/Saison-2-PHP_bases/S02E05-Formulaires/ Red-3-Correction fin & decouverte formulaires.mp4
+
+**Architecture**.
+ - Création d'un fichier de template `contact_tpl.php` dans le dossier _inc_ et d'un fichier contact.php comme fichier d'entré.
+ - Création d'une variable faisant office d'intérupteur dans le fichier `contact.php`
+ - Définir le sous-titre de la partie gauche du header avec une condition.
+ - Ajout d'un sélecteur de classe dans le fichier style.css, pour afficher l'image en background.
+ - Changer l'image de la partie gauche du header avec une condition ternaire, en fonction de la classe qui affiche l'image et si on est sur la page contact.
