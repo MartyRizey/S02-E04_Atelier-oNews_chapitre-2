@@ -160,8 +160,14 @@ Rendre le menu de navigation de la partie gauche dynamique.
 > /media/sf_win_Linux_Partage/A_utiliser_dans_LInux/Lunar/Video_Cours/Saison-2-PHP_bases/S02E05-Formulaires/ Red-3-Correction fin & decouverte formulaires.mp4
 
 **Architecture**.
- - Création d'un fichier de template `contact_tpl.php` dans le dossier _inc_ et d'un fichier contact.php comme fichier d'entré.
- - Création d'une variable faisant office d'intérupteur dans le fichier `contact.php`
- - Définir le sous-titre de la partie gauche du header avec une condition.
- - Ajout d'un sélecteur de classe dans le fichier style.css, pour afficher l'image en background.
- - Changer l'image de la partie gauche du header avec une condition ternaire, en fonction de la classe qui affiche l'image et si on est sur la page contact.
+ - Création d'un fichier de template `contact_tpl.php` dans le dossier _inc_ et d'un fichier `contact.php` comme fichier d'entré.
+ - **changer les données en fonction de la page affichées**
+    - Création d'une variable faisant office d'intérupteur dans le fichier `contact.php`
+    - Définir le sous-titre de la partie gauche du header avec une condition.
+    - Ajout d'un sélecteur de classe dans le fichier style.css, pour afficher l'image en background.
+    - Changer l'image de la partie gauche du header avec une condition ternaire, en fonction de la classe qui affiche l'image et si on est sur la page contact.
+
+**Création du formulaire**
+- Dans le fichier `contact_tpl.php` dans le dossier _inc_ créer un formulaire, correspondant à la maquette donnée.
+
+
