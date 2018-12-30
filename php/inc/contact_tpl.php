@@ -4,7 +4,7 @@
 	Formulaire de contact 01:15:15 
 	- Attribut "action" => c'est la page qui sera appelée ou sur laquelle on sera redirigé 
 	  quand on cliquera sur le bouton valider. -->
-<form action="" method="POST" class="contact-form">
+<form action="" method="GET" class="contact-form">
 
 	<!-- bouton de type radio sur l'input 
 	     L'attribut "name" sur l'élément "input" radio, permet de récupérer en PHP la valeur 

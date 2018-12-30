@@ -169,5 +169,7 @@ Rendre le menu de navigation de la partie gauche dynamique.
 
 **Création du formulaire**
 - Dans le fichier `contact_tpl.php` dans le dossier _inc_ créer un formulaire, correspondant à la maquette donnée.
+- Tester la méthode POST et GET de la balise `<form>`.
+- Afficher les données contenu dans la super globale **$_GET**, avec _var_dump()_ ou _print_r()_.
 
 
