@@ -172,4 +172,7 @@ Rendre le menu de navigation de la partie gauche dynamique.
 - Tester la méthode POST et GET de la balise `<form>`.
 - Afficher les données contenu dans la super globale **$_GET**, avec _var_dump()_ ou _print_r()_.
 
+**Traiter l'information récupérée en PHP**
+- Tester si le formulaire à bien était soumis en POST ou en GET avec un condition, et afficher le tableau correspondant.
+
 
