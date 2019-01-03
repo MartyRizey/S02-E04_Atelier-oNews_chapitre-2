@@ -175,4 +175,19 @@ Rendre le menu de navigation de la partie gauche dynamique.
 **Traiter l'information récupérée en PHP**
 - Tester si le formulaire à bien était soumis en POST ou en GET avec un condition, et afficher le tableau correspondant.
 
+<hr>
+
+# Atelier oNews - chapitre 3
+---
+
+**Les FONCTIONS**_____________________________________________________________________________Video 3 - 01:18:30mns
+> **Video 3 :**
+> Video => https://drive.google.com/drive/folders/1eN5MCrL6n8Ea0QO07c-81IqwxjFPq9e4
+> /media/sf_win_Linux_Partage/A_utiliser_dans_LInux/Lunar/Video_Cours/Saison-2-PHP_bases/S02E06-Fonctions
+
+**Factorisation et Architecture**
+- Dans le dossier `php/inc/` créer un fichier `data.php` qui contiendra nos données. J'entends par données les tableaux de chaque article.
+- Dans le fichier `data.php` créer un tableau associatif _$list_articles_.
+    - Ajoutez 6 clés (article_1, article_2, article_3 ...) au tableau _$list_articles_.
+    - A chaque _clé_ de _$list_articles_ associez une valeur qui sera le tableau de chaque article, donc elle-même un tableau associatif.
 
