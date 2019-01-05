@@ -191,3 +191,22 @@ Rendre le menu de navigation de la partie gauche dynamique.
     - Ajoutez 6 clés (article_1, article_2, article_3 ...) au tableau _$list_articles_.
     - A chaque _clé_ de _$list_articles_ associez une valeur qui sera le tableau de chaque article, donc elle-même un tableau associatif.
 
+**Fonction pour afficher un article**    
+- Dans le dossier `php/inc/` créer un fichier **functions.php**.
+- Dans ce fichier créer une fonction **`getArticle()`** qui prend un paramètre qui stockera la clé d'un article **`($article_id)`**.
+    - on aura besoin inclure le fichier `data.php`, car il nous faut accèder au tableau dans la fonction.
+    - on stockera dans une variable **`$article`** la valeur de la clé ciblée dans le tableau **`$list_articles[$article_id]`**.
+    - on returnera ensuite le résultat pour y accèder de l'extèrieur de la fonction avec le mot-clé **`return`**.
+
+- Dans le fichier **`article1.php`**.
+    - on a besoin d'accèder à la fonction _getArticle_, il faut _inclure_ ou faire un _require_ de `functions.php`.
+    - ensuite on va appeler la fonction en passant un argument dans l'appel de cette fonction. On va passer le nom de la clé correspondant à un article en particulier du tableau **`$list_articles`**. => **`getArticle('article_1')`**
+    - on stockera la valeur de la clé demandée dans la variable **`$article`**.
+
+**Tester la valeur reçue en paramètre de la fonction**
+- Améliorer la fonction en utilisant une condition qui permet de savoir si la valeur reçue en paramètre, est ce que l'on attend bien.
+    - SI oui afficher l'article appelé.
+    - SINON afficher une **`erreur 404`** qui sera stockée à une clé dans le tableau des données.
+- Créer dans le tableau **`$list_articles`** dans le fichier **data.php** un nouveau tableau à la clé **`'__404__'`** reprendre et changer les valeurs des clés du tableau pour en faire une page **`erreur 404`**.
+
+

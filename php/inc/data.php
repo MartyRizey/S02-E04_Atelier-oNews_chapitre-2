@@ -3,6 +3,19 @@
 // $list_article sera ma variable contenant mon tableau. Se sera aussi un tableau associatif, clé/valeur.
 $list_articles = array();
 
+$list_articles['__404__'] = [
+
+    'title'    => 'Un article qui ne devrais pas exister',
+    'author'   => 'Edward Nigma',
+    'text'     => '<p style="color: red; font-weight: bold;">
+                     Votre article n\'existe pas !!
+                   </p>',
+    'category' => 'ERROR 404',
+    'publish'  => date('D d M Y'),
+    'image'    => 'riddler-edward-nigma-mad-6.39.jpg'
+  
+];
+
 // j'ajoute dans le tableau $list_articles à la clé ['artcile_1'] un tableau associatif, qui sera la valeur de cette clé.
 // 'article_1', correspond à l'identifiant(ID) de l'article.
 $list_articles['article_1'] = [

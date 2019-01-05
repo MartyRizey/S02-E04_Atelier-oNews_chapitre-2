@@ -5,7 +5,10 @@
   <!-- 
     Convention de nommage des classes : snake_case / BEM / SMACSS 
   -->
-  <a href="" class="post__category post__category--color-<?= $article['category']; ?>"><?= $article['category']; ?></a>
+  <a href="" class="post__category post__category--color-<?= $article['category']; ?>">
+    <?= $article['category']; ?>
+  </a>
+
   <div class="post__meta">
     <img class="post__author-icon" src="../images/icons/<?= $article['image']; ?>" alt="">
     <strong class="post__author"><?= $article['author']; ?></strong>
@@ -17,3 +20,4 @@
   <a href="index.php" class="post__link">Back to home</a>
 
 </article>
+
