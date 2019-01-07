@@ -1,4 +1,4 @@
-<?php require 'inc/header.php'; ?>
+<?php require 'templates/header.php'; ?>
 
 <!-- emmet: h2+article*6>a+h3+div(img+strong+time)+p+a -->
 <h2 class="right__title">Latest News</h2>
@@ -76,5 +76,5 @@
   </article>
 </div>
 
-<?php require 'inc/footer.php'; ?>
+<?php require 'templates/footer.php'; ?>
     

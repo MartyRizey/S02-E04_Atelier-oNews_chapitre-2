@@ -85,7 +85,7 @@ $list_articles['article_5'] = [
   
 ];
 
-$list_article['article_6'] = [
+$list_articles['article_6'] = [
 
     'title'    => 'Lorem ipsum dolor sit amet',
     'author'   => 'John Marchill',

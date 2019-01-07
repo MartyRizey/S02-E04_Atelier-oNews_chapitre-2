@@ -209,4 +209,20 @@ Rendre le menu de navigation de la partie gauche dynamique.
     - SINON afficher une **`erreur 404`** qui sera stockée à une clé dans le tableau des données.
 - Créer dans le tableau **`$list_articles`** dans le fichier **data.php** un nouveau tableau à la clé **`'__404__'`** reprendre et changer les valeurs des clés du tableau pour en faire une page **`erreur 404`**.
 
+<hr>
+
+# Atelier oNews - chapitre 4
+---
+
+**Les TEMPLATES**_____________________________________________________________________________Video 3 - 01:20:35mns
+> **Video 3 :**
+> Video => https://drive.google.com/drive/folders/1uZL-v1UeecMgtRs_ifxLPxICZvKUVLhX
+> /media/sf_win_Linux_Partage/A_utiliser_dans_LInux/Lunar/Video_Cours/Saison-2-PHP_bases/S02E07-oNews
+
+**Organisation et Architecture**
+- Créer dans le projet, dans le dossier `php` un dossier **`templates`**.
+- Déplacer dedans, les fichiers du dossier `php/inc/` qui sont les modèles pour l'affichage (`article_tpl.php`,`contact_tpl.php`,`footer.php`,`header.php`,`nav.php`)
+- **Attention :** vous aurez des erreurs, car on a déplacé les fichiers. En démarrant `index.php`, php ne trouve plus les fichiers `header.php` et `footer.php`. Changer le dossier `inc` pour **`templates`** dans les instructions de **_require_** qui permettent d'inclure les fichiers.
+- relancez le fichier `index.php` pour s'assurer que la page apparaît correctement.
+
 
