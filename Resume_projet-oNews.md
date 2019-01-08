@@ -225,4 +225,21 @@ Rendre le menu de navigation de la partie gauche dynamique.
 - **Attention :** vous aurez des erreurs, car on a déplacé les fichiers. En démarrant `index.php`, php ne trouve plus les fichiers `header.php` et `footer.php`. Changer le dossier `inc` pour **`templates`** dans les instructions de **_require_** qui permettent d'inclure les fichiers.
 - relancez le fichier `index.php` pour s'assurer que la page apparaît correctement.
 
+**Factorisation**
+   - Du code se répéte dans le fichier `index.php`, notamment les artciles. Nous avons à disposition dans le fichier `data.php` les données, actuellements en dures dans les articles.
+   - L'idée est de parcourir dans le fichier `index.php` avec une boucle _foreach_, le tableau _`$list_articles`_ dans le fichier `data.php`, pour avoir accès aux valeurs des clés correspondants aux articles.
+   - Pensez à _require_ le fichier `data.php` dans `index.php` pour avoir accès aux clés, et donc à leurs valeurs.
+   - Nous voulons afficher seulement les articles, hors dans notre tableau nou avons aussi la clé **`__404__`**, qui ne sera pas affichée dans la page des extraits d'articles. Nous devrons donc faire une condition pour afficher les articles sans la clé **`__404__`**, dans notre boucle qui doit parcourir le tableau _`$list_articles`_.
+    ~
+   - Créer un fichier **`article_extrait.php`** dans le dossier `php/templates`. Copier-coller dedans le premier article, de la balise ouvrante `<article>` à la balise fermante `</article>`, pour n'avoir qu'un seul article dans ce fichier.
+   - Supprimer ensuite tous les `<articles></articles>` du fichier `index.php`.
+     
+**Conditionner l'affichage des articles et du tableau `__404__`**
+   - Utiliser le mot-clé **`continue`** à la condition que SI l'article est strictement égale à la clé `'__404__'`, on passe à l'itération suivante.
+   - A l'itération suivante on sort de la condition et on _include_ ou on _require_ le template `article_extrait.php`. 
+   - Nous aurons donc une structure conditionnel qui utilise seulement un `if`.
+   ~
+   - A ce niveau si nous affichons notre page via `index.php` nous aurons bien 6 articles... Mais 6 articles identiques puisque les données sont en dures dans le code du fichier `article_extrait.php`. Pour afficher les 6 articles différents nous devons rendre dynamique les données.
+
+
 
