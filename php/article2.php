@@ -12,8 +12,8 @@ $article = getArticle('article_2');
     // print_r($article);
     // echo'</pre>';
 
-require 'inc/header.php'; 
+require 'templates/header.php'; 
 
-require 'inc/article_tpl.php';
+require 'templates/article_tpl.php';
 
-require 'inc/footer.php'; 
+require 'templates/footer.php'; 

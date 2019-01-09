@@ -8,13 +8,9 @@ require 'inc/functions.php';
 // que je stocke dans la variable $article
 $article = getArticle('article_6');
 
-    // echo '<pre>';
-    // print_r($article);
-    // echo'</pre>';
+require 'templates/header.php'; 
 
-require 'inc/header.php'; 
+require 'templates/article_tpl.php';
 
-require 'inc/article_tpl.php';
-
-require 'inc/footer.php'; 
+require 'templates/footer.php'; 
 

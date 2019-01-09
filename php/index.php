@@ -19,7 +19,7 @@
       }
 
       // ici on affiche les articles sans la clé '__404__'
-      include 'templates/article_extrait.php';            
+      include 'templates/article_extrait.php'; 
 
     }
 

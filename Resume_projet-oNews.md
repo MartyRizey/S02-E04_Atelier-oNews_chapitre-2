@@ -241,5 +241,21 @@ Rendre le menu de navigation de la partie gauche dynamique.
    ~
    - A ce niveau si nous affichons notre page via `index.php` nous aurons bien 6 articles... Mais 6 articles identiques puisque les données sont en dures dans le code du fichier `article_extrait.php`. Pour afficher les 6 articles différents nous devons rendre dynamique les données.
 
+**Rendre dynamique les données des extraits d'article**
+   - dans le templates ou le modèle du fichier **`article_extrait.php`**, nous voulons rendre les données dynamique, c'est à dire qu'elle seront différentes en fonction du tableau ou sont stockées les données. 
+   - grâce à notre boucle, nous accèdons aux clés _`$article_id`_ et valeurs dans _`$article_datas`_. 
+        - Il faut donc remplacer la valeur `team` par `<?= $article_datas['category']; ?>`
+        - faire la même chose pour la valeur `icon-dar.png`, `john Marchill`, `le 27 mars 2018`
+   - Pour le lien _continue reading_ qui est en dur aussi, c'est un peu particulier.
+        - Remplacer la valeur de l'attribut _href_ de la balise `<a>` par un lien `php` vers le fichier `article1.php` par exemple. Pour rappel _$article_id_ renvoi la valeur `article_1`. IL suffit de trouver un moyen de remplacer '_' et de concaténer '.php'... http://php.net/manual/fr/function.str-replace.php
+        - Pensez dans le dossier `article1.php` et tous les autres articles à changer le chemin d'accès aux templates.
+          
+   - **Rendre dynamique l'extrait de texte**
+   **-Version simple :** 
+        - Pour changer le texte de la balise `<p></p>` en texte dynamique, nous avons besoin du texte qui est à la clé `'text'` dans `$article_datas`.
+        - Il nous faut aussi un extrait du texte. Pour cela nous utiliserons la fonction native de php `substr()` qui permet de retourner un segment de chaîne. http://php.net/manual/fr/function.substr.php
+        - Enfin nous concaténerons le chaîne `'[ ... ]'` à la valeur retrouner pour indiquer qu'il y a du texte après.
+   
+
 
 

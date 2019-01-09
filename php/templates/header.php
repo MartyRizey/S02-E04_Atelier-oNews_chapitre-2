@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE >
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<title>oNews</title>
