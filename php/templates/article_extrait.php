@@ -10,7 +10,8 @@
       <time datetime="2018-03-27"><?= $article_datas['publish']; ?></time>
     </div>
     
-    <p><?= substr($article_datas['text'],0 ,150).' [...]'; ?></p>
+    <!-- j'appelle la fonction qui fait le traitement pour avoir un extrait de l'article -->
+    <p><?= getExtraitTexteArticle($article_datas['text']); ?></p>
 
     <!-- http://php.net/manual/fr/function.str-replace.php-->
     <!-- str_replace('caractère à remplacer', 'on remplace par...', $article_id)-->

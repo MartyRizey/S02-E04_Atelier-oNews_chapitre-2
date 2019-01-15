@@ -15,7 +15,7 @@
     <time datetime="2018-03-27"><?= $article['publish']; ?></time>
   </div>
 
-  <?= $article['text']; ?>
+  <p><?= $article['text']; ?></p>
 
   <a href="index.php" class="post__link">Back to home</a>
 

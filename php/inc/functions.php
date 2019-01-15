@@ -21,6 +21,22 @@ function getArticle($article_id) {
     return $article;   
 }
 
+function getExtraitTexteArticle($article) {
+
+    // http://php.net/manual/fr/function.strip-tags.php
+    // Je supprime les balises HTML & PHP à l'intèrieur de ma variable
+    $article = strip_tags($article);
+    
+    // http://php.net/manual/fr/function.substr.php 
+    // -> retourne un segment de chaîne.
+    $article_reduit = substr($article, 0, 150);
+
+    return $article_reduit . '[ ... ]';
+
+}
+
+
+
 
 
     

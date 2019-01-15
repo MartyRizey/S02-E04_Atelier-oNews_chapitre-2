@@ -249,12 +249,38 @@ Rendre le menu de navigation de la partie gauche dynamique.
    - Pour le lien _continue reading_ qui est en dur aussi, c'est un peu particulier.
         - Remplacer la valeur de l'attribut _href_ de la balise `<a>` par un lien `php` vers le fichier `article1.php` par exemple. Pour rappel _$article_id_ renvoi la valeur `article_1`. IL suffit de trouver un moyen de remplacer '_' et de concaténer '.php'... http://php.net/manual/fr/function.str-replace.php
         - Pensez dans le dossier `article1.php` et tous les autres articles à changer le chemin d'accès aux templates.
-          
-   - **Rendre dynamique l'extrait de texte**
-   **-Version simple :** 
-        - Pour changer le texte de la balise `<p></p>` en texte dynamique, nous avons besoin du texte qui est à la clé `'text'` dans `$article_datas`.
-        - Il nous faut aussi un extrait du texte. Pour cela nous utiliserons la fonction native de php `substr()` qui permet de retourner un segment de chaîne. http://php.net/manual/fr/function.substr.php
-        - Enfin nous concaténerons le chaîne `'[ ... ]'` à la valeur retrouner pour indiquer qu'il y a du texte après.
+         
+**Rendre dynamique l'extrait de texte**
+**+ Version simple :**
+   - Pour changer le texte de la balise `<p></p>` en texte dynamique, nous avons besoin du texte qui est à la clé `'text'` dans `$article_datas`.
+   - Il nous faut aussi un extrait du texte. Pour cela nous utiliserons la fonction native de php `substr()` qui permet de retourner un segment de chaîne. http://php.net/manual/fr/function.substr.php
+   - Enfin nous concaténerons le chaîne `'[ ... ]'` à la valeur retournée pour indiquer qu'il y a du texte après.
+    
+**+ Version avec une fonction :**
+   - Dans le fichier **`functions.php`**, créer une fonction qui recevra en paramètre le texte entier de l'article, passé en argument de l'appel à la fonction.
+   - Utiliser ensuite la fonction native de PHP `substr()` pour créer un tronçon du texte, et stockez la dans une variable.
+   - Retourner avec `return` la valeur obtenue et concaténez la avec la chaîne de caractères `'[...]'`.
+   ~
+   **Appel d la fonction**
+        - Dans le fichier **`article_extrait.php`** qui est notre template ou le modèle, nous avons besoin d'afficher un extrait du texte   
+        - Nous allons appeler notre fonction en passant comme argument le texte, qui est la valeur à la clé _'text'_ du tableau `$article_datas`.
+
+```
+-------------
+| ATTENTION |
+-------------
+    - Pensez bien à faire un "include" ou un "require" du fichier -functions.php- dans le fichier -index.php-, car nous en avons besoin pour traiter les articles.
+    et sans cela nous aurions une erreur de type 'Fatal error'.
+```  
+
+**Une dernière chose**
+----------------------
+Afficher le code source du site. Au niveau de l'extrait d'article vous avez 2 balises `<p>`, c'est une de trop... C'est du au fait que dans la valeur de la clé `'text'` nous incluons la balise.
+   - Dans la fonction `getExtraitTexteArticle()` dans le fichier **`functions.php`** nous allons utiliser une fonction native de PHP pour supprimer ce _tag_ ou cette balise. Cette fonction c'est http://php.net/manual/fr/function.strip-tags.php .
+   - Avant de créer notre section de texte, utiliser la fonction `strip_tags()` avec comme paramètre le texte entier et stocker la valeur dans une variable. 
+
+Voilà , normalement en affichant le code source de ma page je n'aurais plus cette balise `<p>` en plus.
+
    
 
 
